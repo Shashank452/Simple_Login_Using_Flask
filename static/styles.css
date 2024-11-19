@@ -1,0 +1,316 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Apply a background image to the entire page */
+body {
+    background-image: url('../static/images/Website-Design-Background.jpg');
+    background-size: cover; /* Ensure the background image covers the whole screen */
+    background-position: center; /* Center the background image */
+    background-repeat: no-repeat; /* Prevent background image from repeating */
+    font-family: Arial, sans-serif; /* Set the font family */
+    color: white; /* Set text color to white for better contrast */
+    margin: 0;
+    padding: 0;
+    height: 100vh; /* Make sure the body takes up the entire viewport height */
+}
+
+/* Container for the content (for centered layout) */
+.container {
+    text-align: center;
+    padding-top: 100px;
+}
+
+
+.form-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #0056b3;
+}
+
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.user-details {
+    text-align: center;
+}
+
+.user-details p {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+button#logout-btn {
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+button#logout-btn:hover {
+    background-color: #e60000;
+}
+
+/* Index page container styling */
+.index-container {
+    background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent background */
+    padding: 50px;
+    border-radius: 8px;
+    width: 50%; /* You can adjust this to suit your design */
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+/* Heading style for the Index page */
+.index-container h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+/* Description text */
+.index-container p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+/* Button styling */
+.index-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Space between buttons */
+}
+
+/* Style for the buttons */
+.btn {
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: #4CAF50;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 16px;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #45a049; /* Darker green on hover */
+}
+
+/* Styling for the Sign-Up Container */
+.signup-container {
+    background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent background for the form */
+    padding: 40px; /* Padding inside the container */
+    border-radius: 8px; /* Rounded corners */
+    width: 60%; /* Width of the sign-up container (60% of the page width) */
+    margin: 0 auto; /* Center it horizontally */
+    box-sizing: border-box; /* Include padding in the element's total width/height */
+}
+
+/* Add some space between form elements */
+.signup-container input {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; /* Include padding in width */
+}
+
+/* Submit button style */
+.signup-container button {
+    width: 100%;
+    padding: 12px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+/* Style for the Select dropdown */
+.signup-container select {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #fff; /* Ensure background is white */
+    font-size: 1em; /* Match font size with other input fields */
+    box-sizing: border-box; /* Include padding in width calculation */
+}
+
+
+.signup-container button:hover {
+    background-color: #45a049; /* Darker green on hover */
+}
+
+/* Form heading */
+.signup-container h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+/* Links (Sign In and others) */
+.signup-container a {
+    color: white;
+    text-decoration: none;
+    font-size: 1em;
+    margin-top: 10px;
+    display: inline-block;
+}
+
+.signup-container a:hover {
+    text-decoration: underline;
+}
+
+/* Styling for the Login Container */
+.login-container {
+    background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent background for the form */
+    padding: 40px; /* Padding inside the container */
+    border-radius: 8px; /* Rounded corners */
+    width: 60%; /* Width of the login container (60% of the page width) */
+    margin: 0 auto; /* Center it horizontally */
+    box-sizing: border-box; /* Include padding in the element's total width/height */
+}
+
+/* Add some space between form elements */
+.login-container input {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; /* Include padding in width */
+}
+
+/* Submit button style */
+.login-container button {
+    width: 100%;
+    padding: 12px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.login-container button:hover {
+    background-color: #45a049; /* Darker green on hover */
+}
+
+/* Form heading */
+.login-container h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+/* Links (Sign Up and others) */
+.login-container a {
+    color: white;
+    text-decoration: none;
+    font-size: 1em;
+    margin-top: 10px;
+    display: inline-block;
+}
+
+.login-container a:hover {
+    text-decoration: underline;
+}
+
+/* Styling for the Dashboard Container */
+.dashboard-container {
+    background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent background for the dashboard */
+    padding: 40px; /* Padding inside the container */
+    border-radius: 8px; /* Rounded corners */
+    width: 60%; /* Width of the dashboard container (60% of the page width) */
+    margin: 0 auto; /* Center it horizontally */
+    box-sizing: border-box; /* Include padding in the element's total width/height */
+}
+
+/* Heading for the dashboard */
+.dashboard-container h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+/* User information styling */
+.user-info p {
+    font-size: 1.2em;
+    margin: 10px 0;
+}
+
+.user-info strong {
+    font-weight: bold;
+}
+
+/* Logout button style */
+.logout-btn {
+    display: inline-block;
+    padding: 12px 25px;
+    margin-top: 20px;
+    background-color: #4CAF50;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.logout-btn:hover {
+    background-color: #45a049; /* Darker green on hover */
+}
+
+/* Responsive Styling */
+@media (max-width: 600px) {
+    .container {
+        padding: 15px;
+    }
+
+    .form-container h2 {
+        font-size: 18px;
+    }
+
+    form input {
+        padding: 8px;
+    }
+
+    form button {
+        padding: 8px;
+    }
+}
