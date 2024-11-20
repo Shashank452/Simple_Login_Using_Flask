@@ -1,64 +1,122 @@
-# Simple_Login_Using_Flask
-## Index
-![index](https://github.com/user-attachments/assets/9ffda3a4-b5b2-4939-9051-2fe37be3a87f)
-## Login
-![login](https://github.com/user-attachments/assets/18a8e325-e1d5-4ca8-8bf3-1d17180c8cea)
-## Signup
-![signup](https://github.com/user-attachments/assets/82e05c5c-bdcc-4391-9cfb-876c953977e1)
-## Dashboard
-![dashboard](https://github.com/user-attachments/assets/f075d479-b7d6-4c86-84c7-23bfe5340901)
+---
 
-# Simple User Login Website with Flask
+# Flask App with Dockerized SQLite Database
 
-This is a basic user login website built with Python and Flask. The application allows users to register, log in, and access a protected page after successful authentication. Passwords are stored securely using hashing for added security.
+This project is a Flask web application with user authentication and database management. It uses an SQLite database stored inside an `instance` folder. The app is containerized using Docker for easy deployment and portability.
+
+---
 
 ## Features
+- User registration and login functionality.
+- SQLite database for persistent data storage.
+- Fully containerized using Docker.
+- Easily configurable for development and production environments.
 
-- User Registration
-- User Login
-- Password Hashing for security
-- Session Management (logged-in state)
-- Protected route that requires login
+---
 
-## Requirements
+## Prerequisites
+1. **Docker**: Install Docker from [docker.com](https://www.docker.com/).
+2. **Python (optional)**: Only required if you want to run the app locally without Docker.
 
-To run this application, you'll need to have the following installed:
+---
 
-- Python 3.x
-- Flask
-- Flask-Login
-- Flask-WTF (for forms)
-- Werkzeug (for password hashing)
-- SQLite (used as the database for simplicity)
+## Project Structure
+```
+my-flask-app/
+├── app.py                 # Main Flask app
+├── instance/              # Contains SQLite database
+│   └── users.db           # SQLite database file (created automatically if not present)
+├── templates/             # HTML templates for Flask routes
+│   ├── index.html
+│   ├── login.html
+│   ├── signup.html
+│   └── dashboard.html
+├── requirements.txt       # Python dependencies
+└── Dockerfile             # Docker configuration
+```
 
-## Installation
+---
 
-1. Clone the repository:
+## Running the App with Docker
 
-   ```bash
-   git clone https://github.com/yourusername/simple-flask-login.git
-   cd simple-flask-login
-2. Install the required dependencies:
+### 1. Build the Docker Image
+Run the following command to build the Docker image:
+```bash
+docker build -t flask-app .
+```
 
-   ```bash 
-   pip install -r requirements.txt
-4. Start the Flask application:
-   python app.py
-   Navigate to below link to view your website.
-   ```bash
-   http://127.0.0.1:5000
+### 2. Run the Docker Container
+Use this command to start the app in a Docker container:
+```bash
+docker run -p 5000:5000 flask-app
+```
 
-## Login and Registration Forms
-### Registration: Requires a username and password.
-### Login: Requires a username and password.
 
-### Explanation:
+- **`-p 5000:5000`**: Maps Flask's default port 5000 from the container to your local machine.
 
-1. **Project Overview**: Describes the functionality and purpose of the application.
-2. **Installation**: Provides step-by-step instructions to get the app running locally.
-3. **Usage**: Explains how to run the app, navigate to different routes, and interact with the login system.
-4. **File Structure**: Gives an overview of the folder and file layout of the project.
-5. **Dependencies**: Lists Python dependencies needed for the application to run.
-6. **Security Notes**: Provides basic security info, including password hashing.
+### 3. Access the Application
+Open your web browser and navigate to:
+```
+http://localhost:5000
+```
 
-You can expand this README further based on the complexity of your project.
+---
+
+## Running Locally (Without Docker)
+
+### 1. Install Dependencies
+Install the required Python libraries:
+```bash
+pip install -r requirements.txt
+```
+
+### 2. Run the Application
+Start the Flask app:
+```bash
+python app.py
+```
+
+### 3. Access the Application
+Open your browser and navigate to:
+```
+http://localhost:5000
+```
+
+---
+
+## Notes
+
+### SQLite Database
+- The database is stored in the `instance` folder (`users.db`).
+- If the database does not exist, it will be created automatically when the app starts.
+
+### Development Mode
+- The app runs in `debug` mode by default. To change it, modify `app.run(debug=True)` in `app.py`.
+
+---
+
+## Useful Docker Commands
+
+- **Stop all containers**:
+  ```bash
+  docker stop $(docker ps -q)
+  ```
+
+- **Remove all stopped containers**:
+  ```bash
+  docker rm $(docker ps -a -q)
+  ```
+
+- **Remove all unused images**:
+  ```bash
+  docker rmi $(docker images -q)
+  ```
+
+---
+
+## License
+This project is licensed under the MIT License. Feel free to use and modify it for your own purposes.
+
+--- 
+
+This README.md provides a complete guide for using your Flask app with Docker, making it beginner-friendly and comprehensive!
